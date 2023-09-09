@@ -1,0 +1,10 @@
+.popup__tooltip-image {
+  width: 120px;
+  height: 120px;
+  margin: 60px auto 32px;
+  background-image: url('../../../images/success.svg');
+}
+
+.popup__tooltip-image_type_fail {
+  background-image: url('../../../images/fail.svg');
+}

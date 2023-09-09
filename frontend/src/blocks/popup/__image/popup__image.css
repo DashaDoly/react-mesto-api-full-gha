@@ -1,0 +1,10 @@
+.popup__image {
+  display: block;
+  max-width: 75vw;
+  max-height: 75vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color:#000000;
+  color:#FFFFFF;
+}

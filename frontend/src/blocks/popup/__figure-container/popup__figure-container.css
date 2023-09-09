@@ -1,0 +1,5 @@
+.popup__figure-container {
+  max-width: 75vw;
+  min-width: 240px;
+  position: relative;
+}

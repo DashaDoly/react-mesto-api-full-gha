@@ -1,0 +1,18 @@
+.places {
+  display: grid;
+  grid-template-columns: repeat(3, 282px);
+  gap: 20px 17px;
+  justify-content: center;
+}
+
+@media all and (max-width: 920px) {
+  .places {
+    grid-template-columns: repeat(2, 282px);
+  }
+}
+
+@media all and (max-width: 620px) {
+  .places {
+    grid-template-columns: repeat(1, 282px);
+  }
+}

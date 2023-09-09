@@ -1,0 +1,11 @@
+.page__header {
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+@media all and (max-width: 880px) {
+  .page__header {
+    margin-top: 28px;
+    margin-bottom: 42px;
+  }
+}

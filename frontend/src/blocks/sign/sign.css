@@ -1,0 +1,36 @@
+.sign {
+  width: 358px;
+  color: #FFF;
+  margin: auto;
+}
+
+.sign__heading {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
+.sign__caption {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.sign__caption-link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.sign__caption-link:hover {
+  opacity: 0.6;
+}
+
