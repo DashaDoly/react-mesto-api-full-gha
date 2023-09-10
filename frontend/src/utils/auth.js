@@ -1,4 +1,4 @@
-const baseUrl = 'https://api.dolinovskaya.nomoredomainsicu.ru'
+const baseUrl = 'http://localhost:3000'
 
 function getResponse(res) {
     if (res.ok) {
