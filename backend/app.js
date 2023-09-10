@@ -13,12 +13,10 @@ const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.en
 
 const app = express();
 
-app.use(cors());
-
-// {
-//   origin: 'https://dolinovskaya.nomoredomainsicu.ru',
-//   credentials: true,
-// }
+app.use(cors({
+  origin: 'https://dolinovskaya.nomoredomainsicu.ru',
+  credentials: true,
+}));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // за 15 минут
@@ -33,10 +31,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // для приёма ве�
 // подключаемся к серверу mongo
 mongoose.connect(DB_URL);
 
-// DB_URL, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// }
 app.use(requestLogger); // подключаем логгер запросов
 
 app.use(limiter);
@@ -49,6 +43,7 @@ app.use(errors()); // обработчик ошибок celebrate
 
 app.use(errorHandler); // централизованный обработчик ошибок
 
-app.listen(PORT, () => {
-  console.log(`Server is up & listening to port ${PORT}.`);
-});
+app.listen(PORT);
+// app.listen(PORT, () => {
+//   console.log(`Server is up & listening to port ${PORT}.`);
+// });

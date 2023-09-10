@@ -111,7 +111,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://127.0.0.1:3000',
+  baseUrl: 'https://api.dolinovskaya.nomoredomainsicu.ru',
 });
 
 export default api;
