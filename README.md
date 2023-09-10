@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.23.32
+IPv4 158.160.23.32
 
 Frontend https://dolinovskaya.nomoredomainsicu.ru
 
