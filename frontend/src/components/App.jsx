@@ -148,13 +148,15 @@ function App() {
   }
 
   useEffect(() => {
-    Promise.all([api.getUserInfo(localStorage.jwt), api.getInitialCards(localStorage.jwt)])
-    .then(([dataUser, dataCards]) => {
-      setCurrentUser(dataUser);
-      setCards(dataCards);
-    })
+    if (isLoggedIn) {
+      Promise.all([api.getUserInfo(localStorage.jwt), api.getInitialCards(localStorage.jwt)])
+      .then(([dataUser, dataCards]) => {
+        setCurrentUser(dataUser);
+        setCards(dataCards);
+      })
       .catch(error => console.error(`Ошибка при загрузке исходных данных ${error}`))
-  }, []);
+    }
+  }, [isLoggedIn]);
 
   function handleRegister(password, email) {
     setIsSend(true)
