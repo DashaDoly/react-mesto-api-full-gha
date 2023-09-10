@@ -15,11 +15,6 @@ const app = express();
 
 app.use(cors());
 
-// {
-//   origin: 'https://dolinovskaya.nomoredomainsicu.ru',
-//   credentials: true,
-// }
-
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // за 15 минут
   max: 100, // можно совершить максимум 100 запросов с одного IP
@@ -49,3 +44,8 @@ app.listen(PORT);
 // app.listen(PORT, () => {
 //   console.log(`Server is up & listening to port ${PORT}.`);
 // });
+
+// {
+//   origin: 'https://dolinovskaya.nomoredomainsicu.ru',
+//   credentials: true,
+// }
