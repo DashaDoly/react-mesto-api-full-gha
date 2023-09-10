@@ -49,4 +49,6 @@ app.use(errors()); // обработчик ошибок celebrate
 
 app.use(errorHandler); // централизованный обработчик ошибок
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`Server is up & listening to port ${PORT}.`);
+});
