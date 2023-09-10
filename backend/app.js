@@ -31,11 +31,12 @@ app.use(bodyParser.json()); // для собирания JSON-формата
 app.use(bodyParser.urlencoded({ extended: true })); // для приёма веб-страниц внутри POST-запроса
 
 // подключаемся к серверу mongo
-mongoose.connect(DB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(DB_URL);
 
+// DB_URL, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// }
 app.use(requestLogger); // подключаем логгер запросов
 
 app.use(limiter);
